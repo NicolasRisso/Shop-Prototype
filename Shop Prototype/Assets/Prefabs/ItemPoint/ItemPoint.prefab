@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7328174941486311235}
   - component: {fileID: 5033964124483799207}
   - component: {fileID: 6668588127036356665}
+  - component: {fileID: 5208225856100024848}
   m_Layer: 6
   m_Name: ItemPoint
   m_TagString: Untagged
@@ -198,6 +199,18 @@ CircleCollider2D:
   m_Offset: {x: 0.85, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
+--- !u!114 &5208225856100024848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4740903372333417960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2584cfe9997fc43a103f1cf026964b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5352044422601365788
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,8 @@ public class GameAssets : MonoBehaviour
         }
     }
 
+    [SerializeField] private Item[] itens;
+
     //Loaded on Awake, by searching for the player only once and then using that reference across all scripts, it improves code performance
     private GameObject Player;
 
@@ -39,5 +41,10 @@ public class GameAssets : MonoBehaviour
     public GameObject GetPlayer()
     {
         return Player;
+    }
+
+    public Item[] GetItens()
+    {
+        return itens;
     }
 }

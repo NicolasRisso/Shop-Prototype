@@ -1,12 +1,13 @@
 using UnityEngine;
 using System;
 
+//This class handles the interact input and passes it foward in the interactable object
 public class PlayerInteract : MonoBehaviour
 {
-    private bool inInteractZone = false;
-
     public event Action enteredInteractZone;
     public event Action exitedInteractZone;
+
+    private Interaction interactableObject;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class PlayerInteract : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Interact"))
         {
-            inInteractZone = true;
+            interactableObject = other.GetComponent<Interaction>();
             enteredInteractZone?.Invoke();
         }
     }
@@ -26,13 +27,13 @@ public class PlayerInteract : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Interact"))
         {
-            inInteractZone = false;
+            interactableObject = null;
             exitedInteractZone?.Invoke();
         }
     }
 
     private void Interact()
     {
-        if (inInteractZone) Debug.Log("Interact");
+        if (interactableObject != null) interactableObject.Interact();
     }
 }
