@@ -28,6 +28,6 @@ public class PlayerMovement : MonoBehaviour
     //Normalized velocity ensures there is no extra movement speed while walking diagonally
     private void FixedUpdate()
     {
-        rb.velocity = playerInput.GetVelocity().normalized * movementSpeed * Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + playerInput.GetVelocity().normalized * movementSpeed * Time.fixedDeltaTime);
     }
 }
