@@ -37534,11 +37534,11 @@ PrefabInstance:
     - target: {fileID: 6535901451020749464, guid: 99dbb18dbfb251247a69a3fd6ebe9aea, type: 3}
       propertyPath: hairs.Array.data[0]
       value: 
-      objectReference: {fileID: 428548153}
+      objectReference: {fileID: 272288919}
     - target: {fileID: 6535901451020749464, guid: 99dbb18dbfb251247a69a3fd6ebe9aea, type: 3}
       propertyPath: hairs.Array.data[1]
       value: 
-      objectReference: {fileID: 272288919}
+      objectReference: {fileID: 428548153}
     - target: {fileID: 6535901451020749464, guid: 99dbb18dbfb251247a69a3fd6ebe9aea, type: 3}
       propertyPath: bodyClothes.Array.size
       value: 4
