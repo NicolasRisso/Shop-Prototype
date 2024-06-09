@@ -8,3 +8,4 @@ Used Assets:
 - RPG marketplace pack, made by "Gif": https://gif-superretroworld.itch.io/marketplace
 - Pixel Keyboard Keys, made by "Dream Mix": https://dreammix.itch.io/keyboard-keys-for-ui
 - Retro Gaming Font, made by "Daymarius": https://www.dafont.com/retro-gaming.font
+- CoinSFX, made by "BeezleFM": https://freesound.org/people/BeezleFM/sounds/512131/
