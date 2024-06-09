@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class ItemPoint : Interaction
+public class ItemPoint : MonoBehaviour, Interaction
 {
-    public override void Interact()
+    public void Interact(IShopCustomer shopCustomer)
     {
         Debug.Log("Testandow");
     }

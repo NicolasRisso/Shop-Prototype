@@ -53,3 +53,4 @@ MonoBehaviour:
   - {fileID: 2093359007843597552, guid: f86c0c949b31d98409603dcf7d9669e2, type: 3}
   - {fileID: 2093359007843597552, guid: e53c7f2f9d6a8c945bf286b85ef7028c, type: 3}
   - {fileID: 2093359007843597552, guid: c903134b0e000bf42a1db1f8b2bd9060, type: 3}
+  buySFX: {fileID: 8300000, guid: 652d3ac6d1a8193459399d6697bd4fa5, type: 3}

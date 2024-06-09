@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a42ad5d1ef99547a5d951d3c035f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 7
   itemName: Wizard Hat
   itemCost: 90
   clotheType: 2

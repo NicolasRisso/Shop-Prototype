@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a42ad5d1ef99547a5d951d3c035f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 1
   itemName: Alternative Underware
   itemCost: 7
   clotheType: 0
   itemIcon: {fileID: -1952306542, guid: 260f981fdc75a8d4f9fb52b34c653363, type: 3}
-  itemIconYOffset: 10
+  itemIconYOffset: 5
   itemIconScale: 1.5

@@ -19,6 +19,8 @@ public class GameAssets : MonoBehaviour
     }
 
     [SerializeField] private Item[] itens;
+    [Header("Audios")]
+    [SerializeField] private AudioClip buySFX;
 
     //Loaded on Awake, by searching for the player only once and then using that reference across all scripts, it improves code performance
     private GameObject Player;
@@ -46,5 +48,10 @@ public class GameAssets : MonoBehaviour
     public Item[] GetItens()
     {
         return itens;
+    }
+
+    public AudioClip GetBuySFX()
+    {
+        return buySFX;
     }
 }

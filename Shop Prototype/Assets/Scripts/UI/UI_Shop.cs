@@ -11,6 +11,8 @@ public class UI_Shop : MonoBehaviour
     private Transform container;
     private Transform shopItemTemplate;
 
+    private IShopCustomer shopCustomer;
+
     private float shopItemHeight;
 
     private void Awake()
@@ -39,6 +41,7 @@ public class UI_Shop : MonoBehaviour
         {
             CreateItemButton(GameAssets.instance.GetItens()[i], i);
         }
+        Hide();
     }
 
     private void CreateItemButton(Item item, int positionIndex)
@@ -55,6 +58,25 @@ public class UI_Shop : MonoBehaviour
         tmpItemIconReference.localScale = new Vector3(tmpScale, tmpScale, tmpScale);
         tmpItemIconReference.transform.position = tmpItemIconReference.transform.position - new Vector3(0f, item.GetItemIconYOffset(), 0f);
         tmpItemIconReference.GetComponent<Image>().sprite = item.GetItemIcon();
+
+        shopItemTransform.GetComponent<Button>().onClick.AddListener(() => { TryBuyItem(item); });
+
         shopItemTransform.gameObject.SetActive(true);
+    }
+
+    private void TryBuyItem(Item item)
+    {
+        if (shopCustomer.TrySpendGoldAmount(item.GetItemCost())) shopCustomer.BoughtItem(item);
+    }
+
+    public void Show(IShopCustomer shopCustomer)
+    {
+        this.shopCustomer = shopCustomer;
+        gameObject.SetActive(true);
+    }
+    
+    public void Hide()
+    {
+        gameObject.SetActive(false);
     }
 }

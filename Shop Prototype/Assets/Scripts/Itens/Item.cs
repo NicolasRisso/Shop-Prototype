@@ -10,6 +10,7 @@ public class Item : MonoBehaviour
     }
 
     [Header("Base Item Info")]
+    [SerializeField] protected int ID;
     [SerializeField] protected string itemName;
     [SerializeField] protected int itemCost;
     [SerializeField] ClotheType clotheType;
@@ -17,6 +18,11 @@ public class Item : MonoBehaviour
     [Header("Icon Extra Configuration")]
     [SerializeField] protected int itemIconYOffset;
     [SerializeField] protected float itemIconScale = 1;
+
+    public int GetID()
+    {
+        return ID;
+    }
 
     public string GetItemName()
     {

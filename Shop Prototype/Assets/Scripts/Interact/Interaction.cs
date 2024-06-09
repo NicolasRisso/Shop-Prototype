@@ -1,6 +1,4 @@
-using UnityEngine;
-
-public class Interaction : MonoBehaviour
+public interface Interaction
 {
-    public virtual void Interact(){}
+     void Interact(IShopCustomer shopCustomer){}
 }

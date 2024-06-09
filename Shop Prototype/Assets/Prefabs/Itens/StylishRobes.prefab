@@ -44,7 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a42ad5d1ef99547a5d951d3c035f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 3
   itemName: Stylish Robes
   itemCost: 115
-  itemType: 0
+  clotheType: 0
   itemIcon: {fileID: 59906146, guid: 8c3b4baced5176443997ad3f6635c2cf, type: 3}
+  itemIconYOffset: 0
+  itemIconScale: 1

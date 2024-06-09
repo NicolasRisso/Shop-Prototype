@@ -34,6 +34,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void Interact()
     {
-        if (interactableObject != null) interactableObject.Interact();
+        IShopCustomer shopCustomer = GetComponent<IShopCustomer>();
+        if (interactableObject != null && shopCustomer != null) interactableObject.Interact(shopCustomer);
     }
 }
