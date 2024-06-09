@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//Static class that handles all player itens
 public class PlayerInventory : MonoBehaviour
 {
     public struct ItemCounter

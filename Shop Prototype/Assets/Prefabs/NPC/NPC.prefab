@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6720486300943881218}
   - component: {fileID: 2159118621417341665}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: 1out_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,8 @@ GameObject:
   - component: {fileID: 2087932197719260355}
   - component: {fileID: 5916408401492578082}
   - component: {fileID: 7302699085457149947}
-  m_Layer: 3
+  - component: {fileID: -4861554446508289394}
+  m_Layer: 7
   m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +129,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435095534257917040}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -291,6 +292,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 0
+  speed: 4
+  arrivalDistance: 1
+--- !u!114 &-4861554446508289394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435095534257917040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a545a9d4e989e40b80b55d8f893e33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2606576786601258754
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6881903995448565963}
   - component: {fileID: 1493105144332383005}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: 4har_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3711390943827884392}
   - component: {fileID: 1529863755819808373}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: 5hat_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -468,7 +483,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5403653125728685721}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: 1out
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,7 +519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9050155331184076540}
   - component: {fileID: 2988908633904836749}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: 1out_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2891556353553598357}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: 5hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -623,7 +638,7 @@ GameObject:
   - component: {fileID: 1788543505415366319}
   - component: {fileID: 7193055506267184995}
   - component: {fileID: 6535901451020749464}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: SpriteModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,9 +709,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855380af4397d7948a4d223938d1d84a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyClothes: []
-  hairs: []
-  hats: []
+  bodyClothes:
+  - {fileID: 3877094242374003018}
+  - {fileID: 7303800167295204534}
+  - {fileID: 5776526054315278638}
+  - {fileID: 4530799145951927}
+  hairs:
+  - {fileID: 7391049248170133717}
+  - {fileID: 2606576786601258754}
+  hats:
+  - {fileID: 3363862864814340802}
+  - {fileID: 7491011566548676534}
 --- !u!1 &5776526054315278638
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1391426744315705207}
   - component: {fileID: 8897990752852276226}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: 1out_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -790,7 +813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7570855268808853746}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: 4har
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7198403735287758010}
   - component: {fileID: 8110136298228357973}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: 1out_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,7 +931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3208866562360618598}
   - component: {fileID: 7567664358733028534}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: 4har_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +1015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6712248786875461938}
   - component: {fileID: 6542667875284870534}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: 0bas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1076,7 +1099,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3121472896630865849}
   - component: {fileID: 7481128036531771715}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: 5hat_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

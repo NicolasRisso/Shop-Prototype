@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//Class to connect player buying itens with the UI
 [RequireComponent(typeof(AudioSource))]
 public class PlayerBuy : MonoBehaviour, IShopCustomer
 {

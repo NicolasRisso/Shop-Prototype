@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 6
   itemName: Cold Hat
-  itemCost: 55
+  itemCost: 15
   clotheType: 2
   itemIcon: {fileID: -1880564671, guid: 10796034151985c43ba6e941359aa9e5, type: 3}
   itemIconYOffset: 25

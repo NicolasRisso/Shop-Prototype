@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 
+//This is the script for the item tent itself, it handles how many itens it has
 public class ItemPoint : MonoBehaviour, Interaction
 {
     [SerializeField] private int itemID;
@@ -26,5 +27,14 @@ public class ItemPoint : MonoBehaviour, Interaction
         amount += PlayerInventory.instance.GetItemCounters()[itemID].amount;
         PlayerInventory.instance.ConsumeItem(itemID);
         countText.SetText(amount.ToString());
+    }
+
+    public bool AddToChart()
+    {
+        if (amount <= 0) return false;
+        amount--;
+        if (amount < 0) amount = 0;
+        countText.SetText(amount.ToString());
+        return true;
     }
 }

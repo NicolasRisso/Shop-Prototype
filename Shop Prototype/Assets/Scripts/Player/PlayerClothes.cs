@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//Class focused on changing the players clothes, ended up using it in the NPCs too
 public class PlayerClothes : MonoBehaviour
 {
     [SerializeField] private GameObject[] bodyClothes;
@@ -8,14 +9,12 @@ public class PlayerClothes : MonoBehaviour
 
     private int lastID;
 
-    public void ActivateClothe(Item item)
+    public void ActivateClothe(int id)
     {
-        int id = item.GetID();
         if (id >= 0 && id <= 3)
         {
             foreach (GameObject go in bodyClothes)
             {
-                Debug.Log(go.name);
                 go.SetActive(false);
             }
             if (lastID != id) bodyClothes[id].SetActive(true);
@@ -25,7 +24,6 @@ public class PlayerClothes : MonoBehaviour
         {
             foreach (GameObject go in hairs)
             {
-                Debug.Log(go.name);
                 go.SetActive(false);
             }
             if (lastID != id) hairs[id - 4].SetActive(true);
@@ -35,7 +33,6 @@ public class PlayerClothes : MonoBehaviour
         {
             foreach (GameObject go in hats)
             {
-                Debug.Log(go.name);
                 go.SetActive(false);
             }
             if (lastID != id) hats[id - 6].SetActive(true);

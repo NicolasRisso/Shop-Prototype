@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 
+//Display the players gold on screen
 public class GoldUI : MonoBehaviour
 {
     private TextMeshProUGUI goldText;

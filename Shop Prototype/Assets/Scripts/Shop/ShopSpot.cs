@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//Calls the Shop UI when interacted with
 public class ShopSpot : MonoBehaviour, Interaction
 {
     [SerializeField] private string GO_Name = "UI_Shop";

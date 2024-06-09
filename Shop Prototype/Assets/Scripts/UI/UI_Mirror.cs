@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//Class utilized to create the mirror UI programmatically. Although inheritance could have been employed, time constraints prompted me to opt for a swift coding approach.
 public class UI_Mirror : MonoBehaviour, BaseShop
 {
     [Header("Mirror Settings")]
@@ -64,7 +65,7 @@ public class UI_Mirror : MonoBehaviour, BaseShop
 
     private void TryWearItem(Item item)
     {
-        GameAssets.instance.GetPlayer().GetComponentInChildren<PlayerClothes>().ActivateClothe(item);
+        GameAssets.instance.GetPlayer().GetComponentInChildren<PlayerClothes>().ActivateClothe(item.GetID());
     }
 
     public void Show(IShopCustomer shopCustomer)

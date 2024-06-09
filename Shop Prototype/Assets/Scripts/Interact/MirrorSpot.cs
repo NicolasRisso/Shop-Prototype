@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//Calls the mirror UI to be toggled on
 public class MirrorSpot : MonoBehaviour, Interaction
 {
     private BaseShop ui_mirror;

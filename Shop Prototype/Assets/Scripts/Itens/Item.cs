@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//Really basic class for all clothes, ended up not doing it the way I want due to lack of time
 public class Item : MonoBehaviour
 {
     public enum ClotheType

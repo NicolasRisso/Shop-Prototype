@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+//Static class to handle player gold/money, can be called from any script
 public class PlayerMoney : MonoBehaviour
 {
     private static PlayerMoney _instance;
@@ -29,5 +30,11 @@ public class PlayerMoney : MonoBehaviour
         else return false;
         onGoldAmountChanged?.Invoke();
         return true;
+    }
+
+    public void ReceiveGold(int goldAmount)
+    {
+        gold += goldAmount;
+        onGoldAmountChanged?.Invoke();
     }
 }
