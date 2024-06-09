@@ -1,6 +1,10 @@
 # Shop-Prototype
 Here's a simple yet functional shop prototype developed in Unity, focusing on showcasing mechanics and potential interactions.
 
+Purchase new items from the shop with the Coin icon, facilitated by a uniquely code generated UI.
+Following this, replenish your supplies to ensure NPCs can continue purchasing your clothing.
+Repeat this process until you amass wealth :^)
+
 Developed by: Nicolas Pereira Risso Vieira
 
 Used Assets:
