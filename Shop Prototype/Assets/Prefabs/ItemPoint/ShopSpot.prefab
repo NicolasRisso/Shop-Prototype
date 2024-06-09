@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f70a96e84ddef5e40bf603d4b67e21df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GO_Name: UI_Shop
+  ui_shop: {fileID: 8598467917098796213, guid: 97d414295e384284796ee8dab73c122f, type: 3}
 --- !u!1 &5352044422601365788
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,11 +3,11 @@ using UnityEngine;
 //Calls the mirror UI to be toggled on
 public class MirrorSpot : MonoBehaviour, Interaction
 {
-    private BaseShop ui_mirror;
+    [SerializeField] private UI_Mirror ui_mirror;
 
     private bool isShopUIShowing = false;
 
-    private void Start()
+/*    private void Start()
     {
         try
         {
@@ -19,7 +19,7 @@ public class MirrorSpot : MonoBehaviour, Interaction
             Debug.LogException(e);
         }
 
-    }
+    }*/
 
     private void OnTriggerExit2D(Collider2D other)
     {

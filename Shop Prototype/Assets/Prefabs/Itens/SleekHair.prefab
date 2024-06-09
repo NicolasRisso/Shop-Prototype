@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a42ad5d1ef99547a5d951d3c035f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 5
+  ID: 4
   itemName: Sleek Hair
   itemCost: 25
   clotheType: 1

@@ -3,13 +3,11 @@ using UnityEngine;
 //Calls the Shop UI when interacted with
 public class ShopSpot : MonoBehaviour, Interaction
 {
-    [SerializeField] private string GO_Name = "UI_Shop";
-
-    private BaseShop ui_shop;
+    [SerializeField] private UI_Shop ui_shop;
 
     private bool isShopUIShowing = false;
 
-    private void Start()
+/*    private void Start()
     {
         try
         {
@@ -21,7 +19,7 @@ public class ShopSpot : MonoBehaviour, Interaction
             Debug.LogException(e);
         }
         
-    }
+    }*/
 
     private void OnTriggerExit2D(Collider2D other)
     {
