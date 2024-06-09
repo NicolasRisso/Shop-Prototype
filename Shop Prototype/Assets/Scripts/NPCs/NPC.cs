@@ -15,6 +15,7 @@ public class NPC : MonoBehaviour
 
     private bool isMovingToTent = true;
     private bool playerPaid = false;
+    private bool gaveUp = false;
 
     private Animator animator;
     private Rigidbody2D rb;
@@ -53,6 +54,7 @@ public class NPC : MonoBehaviour
                 {
                     if (!InteractWithTent())
                     {
+                        gaveUp = true;
                         Destroy(gameObject, 1f);
                     }
                     else
@@ -99,6 +101,7 @@ public class NPC : MonoBehaviour
 
     private bool InteractWithTent()
     {
+        if (gaveUp) return false;
         bool hasProduct = itemPoint.AddToChart();
         return hasProduct;
     }
