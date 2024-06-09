@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class UI_Shop : MonoBehaviour, BaseShop
+public class UI_Mirror : MonoBehaviour, BaseShop
 {
-    [Header("Shop Settings")]
+    [Header("Mirror Settings")]
     [SerializeField] private int ItemAmount = 8;
     [SerializeField] private float heightExtraOffset = 10f;
 
@@ -20,19 +20,18 @@ public class UI_Shop : MonoBehaviour, BaseShop
         try
         {
             container = transform.Find("Container");
-            shopItemTemplate = container.Find("ShopItemTemplate");
+            shopItemTemplate = container.Find("MirrorItemTemplate");
             if (shopItemTemplate != null && container != null)
             {
                 shopItemTemplate.gameObject.SetActive(false);
                 shopItemHeight = shopItemTemplate.GetComponent<RectTransform>().rect.height + heightExtraOffset;
             }
-            else throw new System.Exception("UI_Shop could not find ShopItemTemplate and/or Container");
+            else throw new System.Exception("UI_Mirror could not find MirrorItemTemplate and/or Container");
         }
         catch (System.Exception e)
         {
             Debug.LogException(e);
         }
-
     }
 
     private void Start()
@@ -51,7 +50,6 @@ public class UI_Shop : MonoBehaviour, BaseShop
         shopItemRectTransform.anchoredPosition = new Vector2(0, -shopItemHeight * positionIndex);
 
         shopItemRectTransform.Find("ItemNameText").GetComponent<TextMeshProUGUI>().SetText(item.GetItemName());
-        shopItemRectTransform.Find("PriceText").GetComponent<TextMeshProUGUI>().SetText(item.GetItemCost().ToString());
 
         Transform tmpItemIconReference = shopItemRectTransform.Find("ItemIcon");
         float tmpScale = item.GetItemIconScale();
@@ -59,14 +57,14 @@ public class UI_Shop : MonoBehaviour, BaseShop
         tmpItemIconReference.transform.position = tmpItemIconReference.transform.position - new Vector3(0f, item.GetItemIconYOffset(), 0f);
         tmpItemIconReference.GetComponent<Image>().sprite = item.GetItemIcon();
 
-        shopItemTransform.GetComponent<Button>().onClick.AddListener(() => { TryBuyItem(item); });
+        shopItemTransform.GetComponent<Button>().onClick.AddListener(() => { TryWearItem(item); });
 
         shopItemTransform.gameObject.SetActive(true);
     }
 
-    private void TryBuyItem(Item item)
+    private void TryWearItem(Item item)
     {
-        if (shopCustomer.TrySpendGoldAmount(item.GetItemCost())) shopCustomer.BoughtItem(item);
+        GameAssets.instance.GetPlayer().GetComponentInChildren<PlayerClothes>().ActivateClothe(item);
     }
 
     public void Show(IShopCustomer shopCustomer)
@@ -74,7 +72,7 @@ public class UI_Shop : MonoBehaviour, BaseShop
         this.shopCustomer = shopCustomer;
         gameObject.SetActive(true);
     }
-    
+
     public void Hide()
     {
         gameObject.SetActive(false);

@@ -14,7 +14,7 @@ public class PlayerBuy : MonoBehaviour, IShopCustomer
     public void BoughtItem(Item item)
     {
         audioSource.PlayOneShot(GameAssets.instance.GetBuySFX());
-        Debug.Log("Buyed: " + item.GetItemName());
+        PlayerInventory.instance.AddItem(item.GetID());
     }
 
     public bool TrySpendGoldAmount(int spendGoldAmount)

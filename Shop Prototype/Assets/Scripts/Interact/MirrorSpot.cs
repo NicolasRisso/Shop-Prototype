@@ -1,10 +1,8 @@
 using UnityEngine;
 
-public class ShopSpot : MonoBehaviour, Interaction
+public class MirrorSpot : MonoBehaviour, Interaction
 {
-    [SerializeField] private string GO_Name = "UI_Shop";
-
-    private BaseShop ui_shop;
+    private BaseShop ui_mirror;
 
     private bool isShopUIShowing = false;
 
@@ -12,29 +10,29 @@ public class ShopSpot : MonoBehaviour, Interaction
     {
         try
         {
-            ui_shop = GameObject.Find(GO_Name).GetComponent<BaseShop>();
-            if (ui_shop == null) throw new System.Exception("ShopSpot could not locate UI_Shop in the scene");
+            ui_mirror = GameObject.Find("UI_Mirror").GetComponent<UI_Mirror>();
+            if (ui_mirror == null) throw new System.Exception("ShopSpot could not locate ui_mirror in the scene");
         }
-        catch(System.Exception e)
+        catch (System.Exception e)
         {
             Debug.LogException(e);
         }
-        
+
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            ui_shop.Hide();
+            ui_mirror.Hide();
             isShopUIShowing = false;
         }
     }
 
     public void Interact(IShopCustomer shopCustomer)
     {
-        if (!isShopUIShowing) ui_shop.Show(shopCustomer);
-        else ui_shop.Hide();
+        if (!isShopUIShowing) ui_mirror.Show(shopCustomer);
+        else ui_mirror.Hide();
         isShopUIShowing = !isShopUIShowing;
     }
 }
