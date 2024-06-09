@@ -5,7 +5,7 @@ Purchase new items from the shop with the Coin icon, facilitated by a uniquely c
 Following this, replenish your supplies to ensure NPCs can continue purchasing your clothing.
 Repeat this process until you amass wealth :^)
 
-Developed by: Nicolas Pereira Risso Vieira
+Developed by: Nicolas Pereira Risso Vieira (in less than 2 days)
 
 Used Assets:
 - Character Base, made by “Seliel the Shaper”: https://seliel-the-shaper.itch.io/character-base
